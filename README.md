@@ -83,7 +83,14 @@ flyback transformer.
 
 ## Connectors
 
-TODO: Add part numbers for connectors and cables
+These are the connectors on the PSU. You could create extension cables in order
+to run the machine with the PSU outside of it for testing.
+
+__Molex mini-fit jr 6-way__ is the large 6-pin connector to the daughterboard [Digikey link](https://www.digikey.com/en/products/detail/molex/0766500076/2115933)
+  
+__TE Connectivity Economy 2.5 4 way__ is the smaller one next to it [Digikey link](https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/1744417-4/4730270) [mating connector](https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/1969588-4/5021426)
+
+__Molex 30-way 1mm ribbon cable__ note top on on side bottom on the other [Digikey link](https://www.digikey.com/en/products/detail/molex/0152670468/4427333)
 
 ## HV circuit description
 
