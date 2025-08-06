@@ -29,6 +29,16 @@ myself and others found.
 > be a starting point where you should then use your best judgement
 > and double checks before relying on anything.
 
+## References
+
+Some links to relevant information, mostly on OpenGlow:
+
+ * [Teardown of power components](https://community.openglow.org/t/reverse-engineering-pr0n/242/2)
+ * [High voltage troubleshooting](https://community.openglow.org/t/laser-not-firing/680/2)
+ * [Testing HV output](https://community.openglow.org/t/gf-not-fire-working-process/847/2)
+ * [Analysis/photos of GF boards](https://community.openglow.org/t/list-of-ics-on-the-control-board/988)
+ * [OpenGlow schematic](https://community.openglow.org/t/openglow-prototype-2-schematics/255)
+
 ## Extracting the supply
 
 The power supply is quite difficult to get out, as it wedged into a tight
@@ -43,8 +53,8 @@ one side during the flip.
 
 ## Basic information.
 
-A lot of basic teardown information can be found in [this post]
-(https://community.openglow.org/t/reverse-engineering-pr0n/242)
+A lot of basic teardown information can be found in
+[this post](https://community.openglow.org/t/reverse-engineering-pr0n/242)
 from Scott.
 
 The power supply is a custom unit which provides several voltages
@@ -52,7 +62,7 @@ required by the machine:
 
  * 3.3v for logic and control board.
  * 12v for various accessories (pump, fans, motors, etc)
- * 40v for highwer power components (more fans, peltier perhaps?)
+ * 40v for higher power components (more fans, peltier perhaps?)
  * 12-22kV for the laser tube.
 
 It also has some control signals which communicate over the ribbon
@@ -100,7 +110,19 @@ TODO: Describe HV principle, operation and parts.
 
 ## Testing the supply
 
-TODO: Add kicad design for breakout board.
+Using an appropriate dummy load and sending the right control signals,
+the various outputs on the supply can be enabled for testing.
+
+Scott has [a post](https://community.openglow.org/t/gf-not-fire-working-process/847/2)
+covering this procedure.
+
+Setting the various signals on the ribbon cable can be tricky. I designed a
+breakout board which brings these connections into a regular header socket,
+and also acts as a passthrough to the control board for verify operation
+when installed.
+
+Designs and Gerbers are [available here](breakout-pcb/).
+
 
 TODO: Add info on extending cables outside the GF machine.
 
