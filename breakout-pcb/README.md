@@ -21,12 +21,15 @@ The boards will require the following additional parts:
 
  - 2 x Molex 52807-3010 connectors
  - 2 x 15-pin standard header sockets
- - 0805 SMD resistors
- - 0805 SMD LEDs
+ - 9 x 0805 SMD resistors
+   - 1 x 8.2k
+   - 1 x 2.2k
+   - 7 * 270r
+ - 9 x 0805 SMD LEDs
 
-You may also need ribbon cable(s). The short one works to connect to this
-breakout, but if you need a longer one or want to extend, you need
-one with the following specs:
+You may also need ribbon cable(s). The existing short one works to
+connect to this breakout, but if you need a longer one or want to
+extend, you need one with the following specs:
 
  - FPC cable
  - 1mm pitch
@@ -45,7 +48,7 @@ If you use this breakout as a passthrough, you will want
 the variant with contacts on the same side to go to the control board.
 [Digikey link to 100mm length](https://www.digikey.com.au/en/products/detail/molex/0151670471/3281724)
 
-Longer lengths should work and means you may be able to run the machine
+Longer lengths should also work and means you may be able to run the machine
 with the supply outside it.
 
 
