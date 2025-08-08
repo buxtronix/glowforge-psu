@@ -16,6 +16,10 @@ I have been trying to repair a broken power supply myself, and wanted
 to combine a bunch of information from various posts, as well as what
 myself and others found.
 
+> [!TIP]
+> Please contribute here if you can. Any additional or improved
+> information will be greatly appreciated by many.
+
 > [!CAUTION]
 > This information involves working with lethal voltages (400-22,000 volts)
 > and high power laser radiation!
@@ -105,6 +109,36 @@ __Molex 30-way 1mm ribbon cable__ note top on on side bottom on the other [Digik
 This is the pinout of the ribbon cable:
 
 ![Ribbon cable pinout](images/ribbon-pinout.png)
+
+## Common failure modes
+
+### Red wire
+
+The long red wire carries the high voltage to the laser tube. This
+is a common cause of laser failures, with the insulation failing
+and the power arcing through to the gantry earth.
+
+There is loads of information online, just search for "glowforge red wire".
+
+### Flyback transformer failure
+
+The high voltage transformer can fail. It seems a common failure mode is
+for the components in the potted section to burn out. The currently only
+know fix for this is to replace the transformer from a donor unit (the
+transformer is a custom unit and cannot be purchased separately).
+
+It *might* be possible to repair the failed parts, but it is risky and
+would require cutting the parts out of the potting , replacing them,
+and re-potting it. A vacuum chamber would be needed at minimum to
+remove air bubbles which would otherwise enable arc-over internally.
+
+### HV driver failure
+
+[TODO]
+
+### Low voltage failures
+
+[TODO]
 
 ## HV circuit description
 
