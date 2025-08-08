@@ -110,6 +110,9 @@ This is the pinout of the ribbon cable:
 
 TODO: Describe HV principle, operation and parts.
 
+The driver daughterboard has some reverse engineering attempts
+documented [here](hv-driver/)
+
 ## HV circuit troubleshooting
 
 ## Testing the supply
