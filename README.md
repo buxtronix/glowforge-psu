@@ -102,6 +102,10 @@ __TE Connectivity Economy 2.5 4 way__ is the smaller one next to it [Digikey lin
 
 __Molex 30-way 1mm ribbon cable__ note top on on side bottom on the other [Digikey link](https://www.digikey.com/en/products/detail/molex/0152670468/4427333)
 
+This is the pinout of the ribbon cable:
+
+![Ribbon cable pinout](images/ribbon-pinout.png)
+
 ## HV circuit description
 
 TODO: Describe HV principle, operation and parts.
