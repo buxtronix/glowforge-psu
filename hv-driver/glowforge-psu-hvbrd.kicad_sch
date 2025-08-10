@@ -5348,6 +5348,28 @@
 			)
 		)
 	)
+	(global_label "LASER_PWM"
+		(shape input)
+		(at 212.09 22.86 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0ecce8e8-8fc0-4bda-942a-e527499a5d7b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 212.09 8.9892 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "ISEN"
 		(shape input)
 		(at 214.63 22.86 90)
@@ -5383,6 +5405,28 @@
 		(uuid "53332891-9fe2-43f1-a3f9-6e285a0ce76b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 209.55 15.7624 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "LASER_ON"
+		(shape input)
+		(at 222.25 22.86 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6f9cc993-967c-4eef-a798-c6589b3df576")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 222.25 10.501 90)
 			(effects
 				(font
 					(size 1.27 1.27)
