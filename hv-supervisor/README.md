@@ -59,6 +59,10 @@ The board should be independently testable, as all of the functions are
 now known. Testing involves setting some voltages on various pins and
 monitoring on a scope for the gate drive signals.
 
+**The below connections may cause a failure of the driver as the correct
+wiring for pin 1 is not yet known (leaving the chip OUT pin unconnected
+might be problematic).** Verification TBD
+
 |   Pin  | What to connect/measure.
 |--------|------------------|
 |    1   |  |
