@@ -1,7 +1,7 @@
-# HV driver board
+# HV supervisor board
 
-This contains a work-in-progress reverse-engineered schematic of the HV driver
-daughterboard. This is the "HV Supervisor" show in
+This contains a work-in-progress reverse-engineered schematic of the HV supervisor
+daughterboard. This is shown in
 [this post](https://community.openglow.org/t/reverse-engineering-pr0n/242/2).
 
 <img src="../images/gf-psu-top.jpg" width="320"/>
@@ -11,7 +11,8 @@ based upon their likely function and likely pinouts. The markings don't show up 
 any known database.
 
 The main chip, an [LT6599ATD](https://www.st.com/resource/en/datasheet/l6599.pdf)
-is a fairly common switchmode controller.
+is a fairly common switchmode controller. A detailed
+[reference design](https://www.mouser.com/catalog/specsheets/eval6599-90w.pdf?srsltid=AfmBOopz7krkCxWkZxH1WWs20OLARHynyoRecZKV39cnS1sxenkA6IhJ) is also available.
 
 The optocoupler is likely a [TLP293](https://toshiba.semicon-storage.com/info/TLP293_datasheet_en_20191129.pdf?did=14419&prodName=TLP293).
 
@@ -51,6 +52,27 @@ Typical signals that would be expected on these pins (also educated guesses):
 |   10   | PWM signal (at 3.3v) to modulate the output. Can be a DC signal for full power. 0v will disable the HV |
 |   11   | Detects under and overvolt of the supply voltage. The L6599AT will shutoff with undervoltage if this is < 1.24v, and overvoltage shutoff if > 6v. This is connected via a divider to the +60v rail, also seems to be linked to `LASER_ON` on the main board. |
 |   12   | Value range is unknown, but likely is proportional to the tube current measured on the HV return. Connects to an optocoupler on the STBY line of the L6599AT in similar fashion to the datasheet description, typically to regulate the output |
+
+## Testing
+
+The board should be independently testable, as all of the functions are
+now known. Testing involves setting some voltages on various pins and
+monitoring on a scope for the gate drive signals.
+
+|   Pin  | What to connect/measure.
+|--------|------------------|
+|    1   |  |
+|    2   | Should be a ~30KHz square wave |
+|    3   | Connect to ground |
+|    4   | Connect to +12VDC |
+|    5   | Should be a ~30KHz square wave out of phase with pin 2 |
+|    6   | Connect this to a 3.3v source, enables the driver |
+|    7   | Leave floating |
+|    8   | Connect to ground. |
+|    9   | Connect to ground. |
+|   10   | Connect to 3.3v, PWM input |
+|   11   | Connect to 3.3v to keep the brown out detector happy |
+|   12   | Leave floating |
 
 
 ## Schematic

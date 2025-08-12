@@ -132,7 +132,7 @@ would require cutting the parts out of the potting , replacing them,
 and re-potting it. A vacuum chamber would be needed at minimum to
 remove air bubbles which would otherwise enable arc-over internally.
 
-### HV driver failure
+### HV supervisor failure
 
 [TODO]
 
@@ -145,7 +145,7 @@ remove air bubbles which would otherwise enable arc-over internally.
 TODO: Describe HV principle, operation and parts.
 
 The driver daughterboard has some reverse engineering attempts
-documented [here](hv-driver/)
+documented [here](hv-supervisor/)
 
 ## HV circuit troubleshooting
 

@@ -5392,6 +5392,28 @@
 			)
 		)
 	)
+	(global_label "HV_I"
+		(shape input)
+		(at 207.01 22.86 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "450ca9e9-f88a-4833-bcd9-55cecfb823fd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 207.01 15.8833 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "LINE"
 		(shape input)
 		(at 209.55 22.86 90)
@@ -5436,7 +5458,7 @@
 			)
 		)
 	)
-	(global_label "PFC_STOP"
+	(global_label "HV_OK"
 		(shape input)
 		(at 219.71 22.86 90)
 		(fields_autoplaced yes)
@@ -5448,7 +5470,7 @@
 		)
 		(uuid "79addeca-6740-42c7-b178-d93b6778a1a5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 219.71 10.501 90)
+			(at 219.71 13.8876 90)
 			(effects
 				(font
 					(size 1.27 1.27)
