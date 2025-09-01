@@ -83,7 +83,7 @@ the gates of both Mosfets, you will see each has a square wave out of phase
 with the other. The frequency will be around 30-32KHz with a magnitude of
 ~24v on the high side Mosfet, and ~12v on the low side.
 
-<img src="../images/supervisor-test.jpg" width="640"/>
+<img src="../images/supervisor-test.png" width="640"/>
 
 ## Schematic
 
