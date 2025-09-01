@@ -151,6 +151,8 @@ documented [here](hv-supervisor/)
 
 ## Testing the supply
 
+### Powerup testing
+
 Using an appropriate dummy load and sending the right control signals,
 the various outputs on the supply can be enabled for testing.
 
@@ -163,6 +165,36 @@ and also acts as a passthrough to the control board for verify operation
 when installed.
 
 Designs and Gerbers are [available here](breakout-pcb/).
+
+### Flyback ring test
+
+The secondary windings on the flyback can become shorted. This will result
+in no or very weak output to the tube, and potential failure of the output
+Mosfets.
+
+It's possible to test for such a short with a ring test. A ring test works
+by applying a weak square wave to a resonant circuit around the flyback core.
+On a good flyback, the circuit will "ring" and oscillate with a gradual
+dampening. If there is a shorted turn, this will absorb all the energy
+and the ring will diminish rapidly, much like a ringing bell being touched.
+
+This test can be easily done using just a scope, a capacitor (~0.5-2uF), and
+a length of thin wire. It's not necessary to remove the flyback from the
+PCB.
+
+The diagram below shows the testing setup. It consists of:
+
+ * A scope with a signal output, 1kHz at 1 volt (often the "cal" output)
+ * A capacitor (non-polarised, ideally film) of between 0.5 and 2uF
+ * 4-5 turns of insulated wire around the core. Thin, as there's not much space.
+ * Connect it all in parallel - the flyback does not need to be removed from the PCB
+ * Set the scope timebase to 200uS/div, and the vertical to around 2-10mV/div
+
+A flyback with no shorted turns will look something like the left picture,
+whereas if it looks more like the right picture, its almost certainly got
+shorted turns and the flyback will need replacing.
+
+![[Flyback test setup](images/gf-flyback.png)
 
 
 TODO: Add info on extending cables outside the GF machine.

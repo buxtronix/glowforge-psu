@@ -40,7 +40,7 @@ Typical signals that would be expected on these pins (also educated guesses):
 
 |   Pin  |   Signal    |
 |--------|------------------|
-|    1   | ~60vDC oscillating, as this carries the primary voltage between the MOSFETs |
+|    1   | ~60v sine wave, this is the full primary voltage.
 |    2   | 12V square wave ~30KHz to drive the high side mosfet gate. |
 |    3   | 0v ground |
 |    4   | 12VDC as this is a stable supply voltage for this board. |
@@ -78,6 +78,12 @@ might be problematic).** Verification TBD
 |   11   | Connect to 3.3v to keep the brown out detector happy |
 |   12   | Leave floating |
 
+The following shows a test setup I have used with success. When measuring
+the gates of both Mosfets, you will see each has a square wave out of phase
+with the other. The frequency will be around 30-32KHz with a magnitude of
+~24v on the high side Mosfet, and ~12v on the low side.
+
+<img src="../images/supervisor-test.jpg" width="640"/>
 
 ## Schematic
 
