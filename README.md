@@ -194,7 +194,7 @@ A flyback with no shorted turns will look something like the left picture,
 whereas if it looks more like the right picture, its almost certainly got
 shorted turns and the flyback will need replacing.
 
-![[Flyback test setup](images/gf-flyback.png)
+![Flyback test setup](images/gf-flyback.png)
 
 
 TODO: Add info on extending cables outside the GF machine.
